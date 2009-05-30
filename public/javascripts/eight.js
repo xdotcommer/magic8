@@ -1,17 +1,14 @@
 $(function() {
-	$('.shake').click(function() {
-		$('#answer').fadeOut('slow', function() {
-			$.getJSON('http://localhost:4567/shake', function(json) {
+	$('#question').change(function() {
+		$('#answer').fadeOut(function() {
+			$.getJSON('http://localhost:4567/shake?question=' + $('#question').val(), function(json) {
 				$('#answer').html(json.answer);
-				$('#answer').fadeIn('slow', function() {
-					$('#history').append('<li>' + json.answer + '</li>')
+				$('#answer').fadeIn(function() {
+					$('#history').append('<li><span class="q">' + $('#question').val() + '</span><br/><span class="a">&nbsp;&nbsp;&nbsp;&nbsp;' + json.answer + '</span></li>');
 				});
 			 });
 		});
+
 		return false;
-	});
-	
-	$('.shake').hover(function(){
-		$('.shake').addClass('hand')
 	});
 });

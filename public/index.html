@@ -2,7 +2,7 @@
 	"http://www.w3.org/TR/html4/strict.dtd">
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>Javascript Test Page</title>
+	<title>Magic 8 Ball</title>
 	<link href="http://localhost:4567/stylesheets/eight.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="javascripts/jquery-1.3.2.js"></script>
 	<script type="text/javascript" src="javascripts/eight.js"></script>
@@ -11,9 +11,11 @@
 <body>
 	<div id='sidebar'>
 		<h1 id='heading'>Magic 8 Ball<hr/></h1>
-		<p id='instructions' class='paragraph shake'>Shake the magic 8 ball and get and answer.</p>
+		<p id='instructions' class='paragraph shake'>Ask a question, shake the magic 8 ball, and get your answer:</p>
 		
-		<p>Your answers so far have been:</p>
+		<input type="text" name="question" id="question" value="">
+		
+		<p>Your answers so far:</p>
 		
 		<ul id='history'>
 		</ul>
@@ -22,7 +24,7 @@
 	
 	<div id='eight' class='shake'>
 		<p id='answer'>
-			Shake
+			Shake Me
 		</p>
 	</div>
 </body>

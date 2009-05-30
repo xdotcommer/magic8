@@ -2,6 +2,13 @@ body {
 	background-image: url("http://localhost:4567/images/felt.jpg");
 	background-repeat: repeat-y repeat-x;
 	color: white;
+	margin: 40px;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	font-size: 1.3em;
+}
+
+#instructions {
+	white-space: nowrap;
 }
 
 a {
@@ -9,14 +16,36 @@ a {
 	text-decoration: none;
 }
 
+.q {
+	
+}
+.a {
+	color: #ffc;
+	white-space: nowrap;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul li {
+	line-height: 1.5em;
+}
+ 
 #sidebar {
 	float: left;
 	width: 300px;
 }
 
+#question {
+	height: 35px;
+	width: 450px;
+	font-size: 1.2em;
+}
+
 #eight {
 	background-color: white;
-	background-image: url("http://localhost:4567/images/magic8ball.png");
+	background-image: url("http://localhost:4567/images/magic8ball.jpg");
 	width: 500px;
 	height: 500px;
 	float: right;
@@ -30,5 +59,6 @@ a {
 }
 
 .hand {
-	cursor: help;
+	cursor: pointer;
+	cursor: hand;
 }
