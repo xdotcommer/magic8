@@ -1,0 +1,34 @@
+body {
+	background-image: url("http://localhost:4567/images/felt.jpg");
+	background-repeat: repeat-y repeat-x;
+	color: white;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+#sidebar {
+	float: left;
+	width: 300px;
+}
+
+#eight {
+	background-color: white;
+	background-image: url("http://localhost:4567/images/magic8ball.png");
+	width: 500px;
+	height: 500px;
+	float: right;
+}
+
+#answer {
+	width: 500px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 460px;
+}
+
+.hand {
+	cursor: help;
+}
