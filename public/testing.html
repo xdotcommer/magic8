@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Javascript Testing README</title>
+	<link href="http://localhost:4567/stylesheets/eight.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<h1>Javascript Testing</h1>
+
+	<p>
+		Basic setup of a javascript test framework, involves the following:
+	</p>
+	<ol>
+		<li>
+			You create a TEST HTML Page
+		</li>
+		<li>
+			You include your javascripts files, and their javascript test runner javascript / css in the &lt;head&gt; of your test page
+		</li>
+		<li>
+			You add some test runner divs in the &lt;body&gt; of your test page
+		</li>
+		<li>
+			You add some HTML your tests will run off of in the &lt;body&gt; of your test page
+		</li>
+		<li>
+			You add the assertions to your test page according to their (javascript) Testing API
+		</li>
+		<li>
+			You open the test page in a browser and watch the tests run
+		</li>
+	</ol>
+	<p>Below are examples for a few of the most popular test frameworks available.</p>
+
+	<div class="testing-framework">
+		<h2>QUNIT</h2>
+
+		<div class='left'>
+			Pros:
+			<ul>
+				<li>Asynchronous Support</li>
+				<li>Good for DOM Testing</li>
+				<li>Tests run sequentially in the order they are added to a suite</li>
+			</ul>
+		</div>
+		
+		<div class='right'>
+			Cons:
+			<ul>
+				<li>Difficult to Automate</li>
+				<li>Non-BDD Assertion Language</li>
+				<li>Somewhat tied to jQuery</li>
+			</ul>
+		</div>
+		
+		<h3 class='clear'>Getting Qunit Setup</h3>
+		<p>
+			I had issues trying to start with this <a href="http://www.lostechies.com/blogs/chad_myers/archive/2008/08/28/getting-started-with-jquery-qunit-for-client-side-javascript-testing.aspx">non-working example</a>, there's no qUnitTesting or config variable... Used example on jQuery website instead (just uses document ready function).  Eventually removed local testrunner.js and testsuite.css in favor of linking to the online version.
+		</p>
+		
+		<ol>
+			<li>
+				Download <a href="http://view.jquery.com/trunk/qunit/testrunner.js">the test runner</a> and <a href="http://view.jquery.com/trunk/qunit/testsuite.css">css</a> from <a href="http://docs.jquery.com/Qunit#Using_QUnit">http://docs.jquery.com/Qunit#Using_QUnit</a>
+			</li>
+			<li>
+				Create an <a href="tests/qunit_example.html">HTML Test Page</a> with the "display" html in the &lt;body&gt;:<br/>
+				<img src="images/qunit_required_html.png"/>
+			</li>
+			<li>
+				Include jquery and the test runner / css in the &lt;head&gt;:<br/>
+				<img src="images/qunit_head.png"/>
+			</li>
+			<li>
+				Add an empty test to the page:<br/>
+				<img src="images/qunit_empty_test.png"/>
+			</li>
+			<li>
+				<a href="tests/qunit_example.html">Open the test html file in a browser</a>
+			</li>
+			<li>
+				You should see 0 tests of 0 failed
+			</li>
+		</ol>
+
+		<h3>Basic Qunit Assertions</h3>
+		<ol>
+			<li>
+				Add these simple assertions to the body of your <a href="tests/qunit_basic.html">HTML Test Page</a>.<br/>
+				<img src="images/qunit_basic_assertions.png"/>
+			</li>
+			<li>
+				<a href="tests/qunit_basic.html">Open the test html file in a browser</a>
+			</li>
+			<li>
+				<a href="http://docs.jquery.com/QUnit#API_documentation">Click here</a> for more detailed documentation on the Qunit Testing API.
+			</li>
+		</ol>
+
+		<h3>Testing Magic8 with Qunit</h3>
+		<ol>
+			<li>
+				First let's add our application's javascript to the HTML Test Page:<br/>
+				<img src="images/qunit_include.png"/>
+			</li>
+			<li>
+				Then we'll copy some application html into the bottom of the &lt;body&gt; of the page:<br/>
+				<img src="images/qunit_html.png"/>
+			</li>
+			<li>
+				Finally we'll add our first test:<br/>
+				<img src="images/qunit_test.png"/>
+			</li>
+		</ol>
+		
+		<h3>Asynchronous Testing with Qunit</h3>
+		<ol>
+			<img src="images/qunit_async.png"/>
+			<li>
+				Trigger some event
+			</li>
+			<li>
+				stop();
+			</li>
+			<li>
+				Make assertions inside a setTimeout(); function
+			</li>
+			<li>
+				start(); at the end of the setTimeout(); function
+			</li>
+		</ol>
+		
+		<h3>The jQunit Alternative</h3>
+		<p>
+			JQUnit is a modified version of QUnit that adds setup, teardown, and assert functions, and encapsulates everything in one global variable so it doesn't pollute the namespace.  <a href="http://stackoverflow.com/questions/209418/what-are-some-javascript-unit-testing-and-mocking-frameworks-you-have-used">More Info</a>
+		</p>
+	</div>
+</body>
