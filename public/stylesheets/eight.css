@@ -34,6 +34,7 @@ h3 {
 
 .testing-framework {
 	border: 2px solid #9FB0CA;
+	margin-bottom: 30px;
 }
 
 .testing-framework p {
@@ -66,11 +67,13 @@ ol li {
 
 ul {
 	list-style-type: none;
-	margin-left: 2em;
+}
+
+ul#history {
 	margin-top: 2em;
 }
 
-ul li {
+ul#history li {
 	line-height: 1.5em;
 	padding-bottom: 20px;
 }
@@ -84,6 +87,7 @@ ul li {
 	margin: 30px;
 	width: 300px;
 	float: left;
+	white-space: nowrap;
 }
 
 .right {

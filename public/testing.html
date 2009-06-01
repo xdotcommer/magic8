@@ -48,6 +48,7 @@
 		<div class='right'>
 			<ul>
 				<li>- Difficult to Automate</li>
+				<li>- No setup & teardown methods</li>
 				<li>- Primitive Syntax: Non-BDD</li>
 				<li>- Somewhat tied to jQuery</li>
 			</ul>
@@ -134,4 +135,46 @@
 			JQUnit is a modified version of QUnit that adds setup, teardown, and assert functions, and encapsulates everything in one global variable so it doesn't pollute the namespace.  <a href="http://stackoverflow.com/questions/209418/what-are-some-javascript-unit-testing-and-mocking-frameworks-you-have-used">More Info</a>
 		</p>
 	</div>
+	
+	<div class="testing-framework">
+		<h2>jsspec</h2>
+
+		<div class='left'>
+			<ul>
+				<li>+ BDD Style Syntax with matchers</li>
+				<li>+ Can run headless</li>
+				<li>+ No required markup in test file</li>
+				<li>+ Can write browser dependent tests</li>
+			</ul>
+		</div>
+		
+		<div class='right'>
+			<ul>
+				<li>- No inherent Async Support</li>
+				<li>- </li>
+			</ul>
+		</div>
+		
+		<h3 class='clear'>Getting jsspec Setup</h3>
+		<ol>
+			<li>
+				Download <a href="http://code.google.com/p/jsspec/downloads/list">the latest zip</a>
+			</li>
+			<li>
+				Open <a href="test/jsspec_demo.html">demo.html</a> in an editor to see the examples
+			</li>
+			<li>
+				Copy JSSpec.css and the diff_match_patch.js / JSSpec.js files into your project
+			</li>
+			<li>
+				Create a blank HTML Test Page and include the files listed above:<br/>
+			</li>
+			<li>
+				A full jsspec Test Page:<br/>
+				<img src="images/jsspec_basic.png"/>
+			</li>
+			<li>
+				See <a href="http://jania.pe.kr/aw/moin.cgi/JSSpec/Manual#head-f69411d45259d722723fe54961c1a53fde8bf288">the manual</a> for detailed API documentation
+			</li>
+		</ol>
 </body>
