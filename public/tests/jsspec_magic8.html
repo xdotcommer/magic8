@@ -9,6 +9,7 @@
 
 		<!-- jQuery and Application Javascript -->
 	    <script language="javascript" src="../javascripts/jquery-1.3.2.js" type="text/javascript"></script>
+
 	    <script language="javascript" src="../javascripts/eight.js" type="text/javascript"></script>
 
 		<!-- Tests -->
@@ -29,10 +30,23 @@
 			});
 			
 			var validAnswers = ["As I see it, yes",   "It is certain",   "It is decidedly so",   "Most likely",   "Outlook good",   "Signs point to yes",   "Without a doubt",   "Yes",   "Yes - definitely",   "You may rely on it",   "Reply hazy, try again",   "Ask again later",   "Better not tell you now",   "Cannot predict now",   "Concentrate and ask again",   "Don't count on it",   "My reply is no",   "My sources say no",   "Outlook not so good",   "Very doubtful"];
-
-			$('#question').val("Should I ask a question?").trigger("change");
+			var originalJSON = $.getJSON;
 
 			describe("Asking a question", {
+		        before_all : function() {
+					var stubbedJSON = function(url,callbackFunction,format) {
+						console.log(callbackFunction)
+						callbackFunction({answer: "Yes"})
+						return true;
+					};
+
+					$.getJSON = stubbedJSON;
+
+					$('#question').val("Should I ask a question?").trigger("change");
+				},
+				after_all : function() {
+					$.getJSON = originalJSON;  
+				},
 				'Answer should be updated': function() {
 					value_of( $("#answer").html().trim() ).should_not_be_empty()
 				},
@@ -52,7 +66,7 @@
 
 	<body>
 		<!-- index.html -->
-		<div id='sidebar' style='display:none'>
+		<div id='sidebar'>
 			<h1 id='heading'>Magic 8 Ball<hr/></h1>
 			<p id='instructions' class='paragraph shake'>Ask the magic 8 ball a question:</p>
 
@@ -63,7 +77,7 @@
 
 		</div>
 
-		<div id='eight' class='shake' style='display:none'>
+		<div id='eight' class='shake'>
 			<p id='answer'>
 			</p>
 		</div>
