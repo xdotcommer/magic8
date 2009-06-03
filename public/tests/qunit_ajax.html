@@ -16,7 +16,14 @@
 
 // Magic 8 Tests
 $(function() {
-	module("Magic 8 Tests");
+	module("Magic 8 Tests", {
+		setup: function() {
+			console.log('before each test');
+		},
+		teardown: function() {
+			console.log('after each test');
+		}
+	});
 
 	test("Answer should start out empty", function() {
 	  expect(1);

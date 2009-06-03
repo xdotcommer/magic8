@@ -1,0 +1,69 @@
+1. Testing Javascript... today we're going to be talking about the different frameworks for testing javascript.
+2. Why Test Javascript -- the first question, It's just javascript, why bother?
+3. Evolution of Testing Javascript:
+	a) joke about testing javascript in IE6 with alerts...
+	b) Using Firebug... a little better, now at least we have console.log messages and we don't get a finger cramp, until we deploy the code and someone tries to use it in a browser without firebug.
+	c) Testing javascript...
+4. What to test?
+	a) Unit testing a new javascript library / plugin
+	b) Testing a page for browser compatibility
+	c) User interaction testing of ajax, etc.
+6. You can already test your javascript... without a framework
+	a) an assertion: (code)
+	b) a stub: (code)
+7. So what do the frameworks provide?
+	* Test Runner UI
+	* Automated Build Tools / Headless?
+	* Async / Ajax Support
+	* BDD-friendly Syntax
+	* Friendly Grammar
+	* Integration with server-side test suites
+	* Simplified Mocking & Stubbing
+	* Code Coverage
+	* Running against multiple browsers? on multiple OS/es?
+8. Test Runner UI
+	* show html and view of one of them
+9. Automated Build Tools (example jsspec with Rhino, etc.)
+10. Async / Ajax Support (Qunit example)
+11. BDD / Friendly grammar (jspec)
+12. Integration with Culerity & BlueRidge
+13. amock example?
+14. jcoverage?
+15. the one that allows you to attach multiple browsers to the server
+
+5. The options
+	* all the options listed on a slide...
+	we're going to try to dig deep into a given framework, but it became apparent that just finding the right framework was more than half the battle
+
+8. Too many... going to cover
+
+
+8. Demo the app and talk about the frameworks?
+	
+9. qunit
+	a) Setup
+	b) Basic Assertions
+	c) Mocking / Stubbing
+	d) Async / Ajax
+	e) Headless
+10. jsspec
+
+11. jspec
+
+12. jsunit
+
+13. yuitest
+
+14. Some other frameworks:
+	* the one that allows you to attach multiple browsers
+	* 
+	
+	
+	Screw.Unit
+	Qunit
+	Jspec
+	Jsspec
+	TestCase
+	JsUnitTest
+	JsUnit
+	
